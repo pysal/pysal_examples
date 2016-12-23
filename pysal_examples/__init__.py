@@ -40,9 +40,7 @@ def available(verbose=False):
     List available datasets
     """
     base = get_path('')
-    print('base:',base)
     examples = [os.path.join(get_path(''), d) for d in os.listdir(base)]
-    print('examples: ',examples)
     examples = [d for d in examples if os.path.isdir(d) and '__' not in d]
     if not verbose:
         return [os.path.split(d)[-1] for d in examples]
@@ -76,6 +74,4 @@ def explain(name):  # would be nice to use pandas for display here
     """
     path = get_path(name)
     fpath = os.path.join(path, 'README.md')
-    print('path: ',path)
-    print('fpath: ',fpath)
     return _read_example(fpath)
