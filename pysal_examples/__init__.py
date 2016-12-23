@@ -43,7 +43,13 @@ def available(verbose=False):
     examples = [os.path.join(get_path(''), d) for d in os.listdir(base)]
     examples = [d for d in examples if os.path.isdir(d) and '__' not in d]
     if not verbose:
-        return [os.path.split(d)[-1] for d in examples]
+        tmp = [os.path.split(d)[-1] for d in examples]
+        try:
+            tmp.remove('tests') # don't include unit tests
+        except:
+            pass
+        tmp.sort()
+        return tmp
     examples = [os.path.join(dty, 'README.md') for dty in examples]
     descs = [_read_example(path) for path in examples]
     return [{desc['name']:desc['description'] for desc in descs}]
