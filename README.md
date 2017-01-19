@@ -7,7 +7,7 @@ Example data sets and helper functions for PySAL
 
 ```
 
-n [1]: import pysal_examples
+In [1]: import pysal_examples
 
 In [2]: pysal_examples.available()
 Out[2]:
