@@ -3,6 +3,9 @@
 Example data sets and helper functions for PySAL
 
 
+This module is pre-alpha and is part of a [refactoring of PySAL](https://github.com/pysal/pysal/wiki/PEP-13:-Refactor-PySAL-Using-Submodules).
+
+
 ## Using `pysal_examples`
 
 ```
