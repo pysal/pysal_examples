@@ -1,3 +1,6 @@
+__author__ = 'Serge Rey sjsrey@gmail.com'
+from pysal_examples._version import version as _version
+
 import os
 
 __all__ = ['get_path']
