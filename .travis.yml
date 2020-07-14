@@ -29,5 +29,5 @@ notifications:
         recipients:
             - sjsrey@gmail.com
         on_success: change
-        on_faliure: always
+        on_failure: always
 
